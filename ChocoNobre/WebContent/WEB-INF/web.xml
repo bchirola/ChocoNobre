@@ -9,14 +9,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <servlet>
-  <servlet-name>CategoriaController</servlet-name>
-  <servlet-class>com.choco.controller.CategoriaController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>CategoriaController</servlet-name>
-  <url-pattern>/CategoriaController.do</url-pattern>
-  </servlet-mapping>
-  
 </web-app>

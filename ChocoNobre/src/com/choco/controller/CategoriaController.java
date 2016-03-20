@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 //import com.choco.model.Categoria;
 import com.choco.model.CategoriaManager;
  
-//@WebServlet("/CategoriaController")
+@WebServlet("/CategoriaController.do")
 public class CategoriaController extends HttpServlet {
  
     private static final long serialVersionUID = 1L;
