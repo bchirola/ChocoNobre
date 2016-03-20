@@ -2,25 +2,15 @@ package com.choco.model;
 
 public class Categoria {
 
-	private int codCategoria;
+	private int id;
 	private String nome;
-	
-	public Categoria() {
-		super();
+
+	public int getId() {
+		return id;
 	}
 
-	public Categoria(int codCategoria, String nome) {
-		super();
-		this.codCategoria = codCategoria;
-		this.nome = nome;
-	}
-
-	public int getCodCategoria() {
-		return codCategoria;
-	}
-
-	public void setCodCategoria(int codCategoria) {
-		this.codCategoria = codCategoria;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {
