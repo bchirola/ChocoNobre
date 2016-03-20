@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
  
-<title>Adicionar Categoria</title>
+<title>Choco Nobre</title>
 </head>
 <body>
     <form action="CategoriaController.do" method="post">
     <br>
-    <h2>Adicionar Categoria</h2>
+    <h2>Alterar Categoria</h2>
     <br>
         <fieldset>
             <div>
-                <label for="nome">Nome</label> <input type="text" name="Nome" value="<%=request.getAttribute("nome")%>" />
-                <label for="id">Nome</label> <input type="hidden" name="id" value="<%=request.getAttribute("id")%>" />
+                <label for="nome">Nome: </label> <input type="text" name="Nome" value="<%=request.getParameter("nome")%>" />
+                <label for="id"></label> <input type="hidden" name="id" value="<%=request.getParameter("id")%>" />
             </div>
             <div>
                 <input type="submit" value="Salvar" />

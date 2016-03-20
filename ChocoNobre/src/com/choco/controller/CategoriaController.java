@@ -17,7 +17,8 @@ public class CategoriaController extends HttpServlet {
  
     private static final long serialVersionUID = 1L;
     public static final String lISTAR = "/ListarCategoria.jsp";
-    public static final String EDITAR = "/Categoria.jsp";
+    public static final String INCLUIR = "/IncluirCategoria.jsp";
+    public static final String ALTERAR = "/AlterarCategoria.jsp";
  
     public CategoriaController() {
        super();
@@ -34,9 +35,9 @@ public class CategoriaController extends HttpServlet {
       		String msg = CategoriaManager.apagarCategoria(id);
             request.setAttribute("categorias", CategoriaManager.listarTodas());
         }
-        else if( action.equalsIgnoreCase( "editar" ) ) {
+        else if( action.equalsIgnoreCase( "alterar" ) ) {
         	
-            forward = EDITAR;
+            forward = ALTERAR;
             String nome = request.getParameter("nome");
             int id = Integer.parseInt( request.getParameter("id") );
             //String msg = CategoriaManager.alterarCategoria(id,nome);
@@ -44,8 +45,8 @@ public class CategoriaController extends HttpServlet {
             request.setAttribute("id", id);	
             
         }
-        else if( action.equalsIgnoreCase( "insert" ) ) {
-            forward = EDITAR;
+        else if( action.equalsIgnoreCase( "inserir" ) ) {
+            forward = INCLUIR;
         }
         else {
             forward = lISTAR;
@@ -60,7 +61,7 @@ public class CategoriaController extends HttpServlet {
     	String msg;
     	String nome = request.getParameter( "Nome" );
     	 
-     	if (request.getParameter("id") == null ) {
+     	if (request.getParameter("id") == null || request.getParameter("id").isEmpty() ) {
     		msg = CategoriaManager.criarCategoria(nome);
         }
         else {

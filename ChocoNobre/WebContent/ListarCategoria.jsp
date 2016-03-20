@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Listar Categorias</title>
+<title>Choco Nobre</title>
 </head>
 <body>
+    <br>
+    <h2>Listar Categorias</h2>
+    <br>
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Id</th>
                 <th>Nome</th>
                 <th colspan="2">Action</th>
             </tr>
@@ -30,7 +33,7 @@
 			            <td> <%=c.getNome()%> </td>
 			            
 			            <td>	
-						<a href="CategoriaController.do?action=editar&id=<%=c.getId()%>&nome=<%=c.getNome()%>">Alterar </a>
+						<a href="CategoriaController.do?action=alterar&id=<%=c.getId()%>&nome=<%=c.getNome()%>">Alterar </a>
 						</td> 
 			            <td>
 			            <a href="CategoriaController.do?action=apagar&id=<%=c.getId()%>">Apagar </a>
@@ -44,7 +47,7 @@
     <br><br>
     
     <p>
-        <a href="Categoria.jsp?action=inserir">Adicionar Categoria</a>
+        <a href="CategoriaController.do?action=inserir">Adicionar Categoria</a>
     </p>
 </body>
 </html>
